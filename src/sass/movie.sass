@@ -1,0 +1,477 @@
+@import variables
+@import basic-formating
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-text-size-adjust: 100%
+
+
+@font-face 
+  font-family: 'Light'
+  src: url('./fonts/FoundersGrotesk-Regular.woff2') format("woff2")
+  font-weight: bold
+  font-style: normal
+
+@font-face 
+  font-family: 'Header'
+  src: url('./fonts/UniviaPro-Regular.woff') format("woff")
+  font-weight: bold
+  font-style: normal
+
+body
+  
+  
+  
+  
+.movie-body
+  background: $b no-repeat center center/cover
+  // min-height: 60vh
+  position: relative
+  font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  
+  width: 100vw
+
+
+  
+.movie-overall-overlay
+    background: rgba(0,0,0,.92)
+    // background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 100%)
+    width: 100%
+    min-height: 100vh
+    
+
+.movie-image-banner
+  color: $w
+  // background: black
+  padding: 50px 0
+  padding-bottom: 10px
+  padding-top: 25px
+  .container
+    padding: 20px
+    box-shadow: -4px 4px 0 $r5, -8px 8px 0 $y5, -12px 12px 0 $t5
+    border: 1px solid $w
+    display: flex
+
+    max-width: 75vw
+    margin: 0 auto
+    .details-left
+    
+      // flex-basis: 100%
+      img
+        height: 70vh
+    .details-right
+      flex: 1
+      color: $w
+      // background: rgba(255,255,255,.3)
+      
+      // background: rgba(0,0,0,.2)
+      padding-left: 40px
+      padding-top: 30px
+      .movie-details-list
+        .movie-details-li
+          font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          margin-bottom: 25px
+          font-size: 18px
+          display: flex
+          justify-content: space-between
+          flex-basis: 30%
+          .movie-details-entry
+            color: $g4
+            flex-basis: 60%
+            font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            font-size: 15px
+            
+      
+
+.movie-plot
+  margin-top: 20px
+  
+  
+  color: $w
+  .container
+    max-width: 60vw
+
+    margin: 0 auto
+    .movie-plot-content
+      .plot-header
+        font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        letter-spacing: 2px
+        font-size: 18px
+        margin-bottom: 5px
+        text-align: center
+      .plot-underline
+        margin: 0 auto
+        width: 45px
+        height: 4px
+        border-radius: 2px
+        background: $r5
+        margin-bottom: 15px
+      .plot-content
+        color: $g4
+        text-align: justify
+        font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        line-height: 1.5
+  
+
+.movie-iframe
+  
+  margin-top: 30px
+  margin-bottom: 30px
+  .container
+    
+    max-width: 70vw
+    margin: 0 auto
+    height: 500px
+    iframe
+
+.cast
+  font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  .container
+    max-width: 80%
+    margin: 0 auto
+    .cast-header
+      text-transform: uppercase
+      font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+      color: $w
+      text-align: center
+
+
+    .underline
+      border-radius: 3px
+      height: 5px
+      width: 45px
+      margin: 0 auto
+      background: $pk4
+      margin-bottom: 25px
+      margin-top: 5px
+    .cast-wrapper
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+      grid-gap: 10px
+      .cast-each
+        font-size: 16px
+        color: rgb(104, 99, 82)
+        .cast-img-cnt
+          .cast-img
+            width: 100%
+        .cast-name
+          
+        .cast-character
+          .cast-ctr
+
+
+
+.similar-wrapper
+  margin-top: 30px
+  position: relative
+  overflow: hidden
+  // background: transparent
+  // background-image: url('./img/vino-li-gGX1fJkmw3k-unsplash-min.jpg') 
+  // // background-image: url('./img/jason-leung-Xaanw0s0pMk-unsplash.jpg')
+  // background-repeat: repeat
+  // background-size: contain
+  // background-position:  center center
+  // background-color: #202325
+  background-color: rgba(0,0,0,.5) 
+  color: $w
+  &::before
+    // animation: movie 1s steps(4) infinite
+    position: absolute
+    // background-color: $b
+    content: ''
+    height: 300%
+    width: 300%
+    // background-image: url(./img/movie.png)
+
+    // height: 200%
+    // left: -50%
+    // top: -50%
+    // width: 200%
+    // opacity: .7
+    z-index: 3
+  
+      
+  .similar-overlay
+    position: relative
+    z-index: 7
+    // background: rgba(0,0,0,.85)
+    padding-bottom: 30px
+    .similar-ind-cat,
+      color: $w
+      
+      padding-bottom: 10px
+      position: relative
+      top: 20px
+      max-width: 90%
+      margin: 0 auto
+      .similar-header
+        padding: 0 1.5%
+        // display: flex
+        // justify-content: space-between
+        margin-bottom: 15px
+        
+        .similar-title
+          letter-spacing: 1.1px
+          z-index: 1
+          display: inline-block
+          position: relative
+          padding: 1px 3px
+          padding-top: 0px
+          border-bottom: 1px solid $w
+          border-right: 1px solid $w
+          color: $y4
+          font-size: 20px
+          font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          
+          background: transparent
+        
+        
+          
+        
+      .similar-collection
+        overflow-x: scroll
+        &::-webkit-scrollbar
+          
+          height: 6px
+        &::-webkit-scrollbar-thumb
+          background: $r2
+          
+          border-radius: 5px
+        .similar-container
+          min-width: 100vw
+          display: grid
+          
+          
+          grid-template-columns: repeat(10, minmax(120px, 1fr))
+          grid-gap: 20px
+          .similar-result  
+            
+            
+            
+            .s-img-container
+              .s-result-img
+                max-width: 100%
+                display: block
+                &:hover
+                  transform: scale(1.3)
+              
+                  
+            .s-result-name
+              font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+              max-height: 40px
+              font-size: 16px
+              color: rgb(104, 99, 82)
+              overflow: hidden
+              text-overflow: ellipsis
+              margin-top: 5px
+
+
+
+  
+
+
+.plot-button-wrapper
+    font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    margin-top: 20px
+    padding-bottom: 20px
+    display: flex
+    justify-content: center
+    .pb-2
+      text-align: center
+      border-radius: 3px
+      color: $g9
+      background: $w
+      outline: none
+      border: none
+      font-weight: bold
+      padding: 10px 17px
+      &:hover
+        background: $g3
+    
+
+          
+@keyframes movie
+  0% 
+      -webkit-transform: translate(0, 0)
+      transform: translate(0, 0)
+  
+  10% 
+      -webkit-transform: translate(-5%, -5%)
+      transform: translate(-5%, -5%)
+  
+  20% 
+      -webkit-transform: translate(-10%, 5%)
+      transform: translate(-10%, 5%)
+  
+  30% 
+      -webkit-transform: translate(5%, -10%)
+      transform: translate(5%, -10%)
+  
+  40% 
+      -webkit-transform: translate(-5%, 15%)
+      transform: translate(-5%, 15%)
+  
+  50% 
+      -webkit-transform: translate(-10%, 5%)
+      transform: translate(-10%, 5%)
+  
+  60% 
+      -webkit-transform: translate(15%, 0)
+      transform: translate(15%, 0)
+  
+  70% 
+      -webkit-transform: translate(0, 10%)
+      transform: translate(0, 10%)
+  
+  80% 
+      -webkit-transform: translate(-15%, 0)
+      transform: translate(-15%, 0)
+  
+  90% 
+      -webkit-transform: translate(10%, 5%)
+      transform: translate(10%, 5%)
+  
+  100% 
+      -webkit-transform: translate(5%, 0)
+      transform: translate(5%, 0)
+          
+@media (max-width: 1200px)
+  .movie-details-li
+    font-size: 16px !important
+
+@media (max-width: 1125px)
+  .movie-image-banner
+  
+    .container
+      max-width: 80vw !important
+
+@media (max-width: 1000px)
+  .cast-wrapper
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
+  .movie-iframe
+    .container
+      height: 400px !important
+  .movie-image-banner
+  
+    .container
+      max-width: 90vw !important
+
+@media (max-width: 900px)
+  .details-right
+    padding-top: 5px !important
+  .details-left
+    img
+      height: 60vh !important
+  .movie-details-li
+    font-size: 14px !important
+  .movie-details-entry
+    font-size: 14px !important
+
+@media (max-width: 800px)
+  .similar-collection
+    &::-webkit-scrollbar
+      background: transparent !important
+      display: none !important
+      height: none !important
+    &::-webkit-scrollbar-thumb
+      background: none !important
+      
+      border-radius: none !important
+  .details-right
+    margin-top: 20px
+
+    
+  .movie-image-banner
+    .container
+      
+      max-width: 90% !important
+      display: block !important
+  .details-left
+    overflow: hidden
+    height: 60vh
+
+    img
+      position: relative
+      top: -50%
+      height: auto !important
+      width: 85vw !important
+      margin: 0 auto
+  
+  .movie-iframe
+    .container
+      height: 200px !important
+      
+  .movie-image-banner
+    padding-top: 10px !important
+  .movie-plot
+    .container
+      max-width: 80vw !important
+
+@media (max-width: 500px)
+  .cast
+    .container
+      max-width: 90% !important
+
+  .cast-header, .s-result-name, .similar-title, .plot-header
+    font-size: 15px !important
+  .cast-each
+    font-size: 13px !important
+  .cast-wrapper
+    
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important
+  
+  
+  .movie-iframe
+    .container
+      
+      max-width: 100vw !important
+  .plot-content
+    text-align: justify !important
+    font-size: 14px !important
+    line-height: 1.5 !important
+  .movie-plot
+    .container
+      max-width: 85vw !important
+  .movie-details-entry
+    font-size: 12px !important
+  .details-right
+    padding-left: 0 !important
+  .details-left
+    overflow: none !important
+    height: auto !important
+    img
+      width: 80% !important
+      margin: 0 auto !important
+      height: auto !important
+  .movie-image-banner
+    .container
+      max-width: 90% !important
+
+@media (max-width: 400px)
+  // .plot-content
+  //   text-align: left !important
+  //   font-size: 14px !important
+  //   line-height: 1.5 !important
+  // .movie-plot
+  //   .container
+  //     max-width: 90vw !important
+  // .movie-details-entry
+  //   font-size: 12px !important
+  // .details-right
+  //   padding-left: 0 !important
+  .details-left
+    img
+      width: 100% !important
+      height: auto !important
+  // .movie-image-banner
+  //   .container
+  //     display: block
+    
+
+  
+
+
+
+    

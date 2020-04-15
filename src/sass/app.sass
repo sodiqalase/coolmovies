@@ -1,0 +1,886 @@
+@import variables
+@import basic-formating
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-text-size-adjust: 100%
+
+@font-face 
+  font-family: 'Light'
+  src: url('./fonts/FoundersGrotesk-Regular.woff2') format("woff2")
+  font-weight: bold
+  font-style: normal
+
+@font-face 
+  font-family: 'Header'
+  src: url('./fonts/UniviaPro-Regular.woff') format("woff")
+  font-weight: bold
+  font-style: normal
+
+
+body
+  font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  
+  background: $b
+  // background: none
+
+// .show
+//   transform: translateX(0%) !important
+
+
+.mobile-nav
+  position: fixed
+  right: 0
+  bottom: 0
+  box-shadow: $bs3
+  transform: translateX(150%)
+  height: 100vh
+  width: 25vw
+  z-index: 25
+  
+  background: #f0f4f9
+  display: flex
+  transition: all .8s
+  
+  
+
+    
+  .mobile-nav-inner
+    
+    width: 100%
+    font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    button
+        
+        width: 20px
+        height: 20px
+        margin-top: 3%
+        margin-left: 3%
+        top: 5px
+        background: none
+        
+        // margin-top: 3%
+        border: none
+        outline: none 
+        svg
+          width: 100%
+          height: 100%
+          color: $pk4
+    .nav-header
+      
+      color: rgb(48, 200, 214)
+      border-bottom: 1px solid $w
+      display: flex
+      padding: 5px 20px
+      padding-bottom: 8px
+      text-align: center
+      
+      font-size: 22px
+      
+    .nav-body
+      padding: 10px 20px
+      .nav-list
+        .nav-item
+          line-height: 2.5
+          .nav-link
+            font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            color: #2b546a
+            font-size: 18px
+            font-weight: normal
+            &:hover
+              color: $r5
+              text-decoration: underline
+
+
+
+.cover
+  position: relative
+  height: 70vh
+  overflow: hidden
+  
+  .img-scroll
+    position: absolute
+    top: -150px
+    z-index: 0
+    max-height: 2160
+    animation: scroll 35s infinite linear
+  
+  
+  .content
+    color: $g8
+    position: relative
+    top: -10px
+    
+    z-index: 10
+    width: 60%
+    min-height: 120%
+    padding: 100px 40px
+    padding-bottom: 0
+    background-image:  url('./img/background.svg')  
+    background-size: cover
+    background-position: top center
+    // background-color: rgba(22, 30, 46, .98)
+    
+    // background: rgba(22, 30, 46, .98)
+    .navigation
+      color: $w
+      font-size: 22px
+      padding: 10px 0
+      background: transparent
+      position: absolute
+      z-index: 20
+      top: 20px
+      width: 100%
+      .container
+        display: flex
+        justify-content: space-between
+        font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        max-width: 100%
+        margin: 0 auto
+        .site-name
+          align-self: center
+          
+          font-weight: bold
+        .right
+          transform: translateX(-6vw)
+          .svg-inline--fa
+            width: 25px
+            height: 25px
+            
+             
+    
+    h3
+      font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+      font-size: 48px
+      
+      margin-bottom: 10px
+      // color: rgb(48, 200, 214)
+      color: $pk4
+    .search-form
+      padding: 30px 15px
+      padding-left: 0
+      padding-top: 15px
+      background: transparent
+      max-width: 400px
+      margin-top: 5px
+      
+      border-radius: 4px
+      
+      .form-group
+        width: 100%
+        margin-bottom: 20px
+        input, select
+          font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          outline: none
+          border-radius: 3px
+          border: 1px solid $g3
+          background: $w
+          padding: 10px 10px
+          font-size: 16px
+          width: 100%
+          option
+            color: $g6
+            margin-bottom: 5px
+            display: block
+        .search-input
+          
+          color: $g7
+          background: $w
+        input::-webkit-input-placeholder
+          color: $g5
+        .categories-select
+          background: $w
+          color: $g6
+      .form-submit
+        margin-top: 20px
+        .submit-button
+          font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          letter-spacing: 1.2px
+          display: block
+          width: 100%
+          outline: none
+          border: none
+          border-radius: 3px
+          box-shadow: $bs-inner
+          
+          color: $w
+
+          font-weight: bold
+          font-size: 14px
+          padding: 10px
+          background: $pk4
+
+
+.search-result
+  display: none
+  position: relative
+  overflow: hidden
+  // background-image: url('./img/vino-li-gGX1fJkmw3k-unsplash-min.jpg') 
+  // background-repeat: repeat
+  // background-size: contain
+  // background-position:  center center
+  // background: rgba(0,0,0,.1)
+  // -webkit-animation: movie 1s steps(4) infinite
+  // animation: movie 1s steps(4) infinite
+  background-color: #202325
+  
+  
+  
+  
+  // z-index: 99
+  color: $w
+  &::before
+    animation: movie 1s steps(4) infinite
+    position: absolute
+    background-color: $b
+    content: ''
+    height: 300%
+    width: 300%
+    background-image: url(./img/movie.png)
+
+    height: 200%
+    left: -50%
+    top: -50%
+    width: 200%
+    
+    z-index: 3
+  
+  .search-result-overlay
+    position: relative
+    z-index: 7
+    padding: 30px 0
+    // background: rgba(0,0,0,.85)
+    .container
+      max-width: 90vw
+      margin: 0 auto
+      .search-header
+        text-transform: uppercase
+        font-family: 'Header','Segoe UI',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,'Helvetica Neue', sans-serif
+        font-size: 16px
+        text-align: center
+        color: $g1
+        margin-bottom: 5px
+      .underline
+        border-radius: 3px
+        height: 5px
+        width: 45px
+        margin: 0 auto
+        background: $pk4
+        margin-bottom: 25px
+      .search-result-wrapper
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+        grid-gap: 20px
+        
+        .sr-result-each 
+          width: 100%
+          .sr-img-container
+            .sr-result-img
+              max-width: 100%
+              display: block
+              &:hover
+                transform: scale(1.3)
+            .sr-result-rating
+              margin-top: 5px
+              
+            .sr-result-rating
+              margin-top: 5px
+                          
+              .sr-star
+                display: inline-block
+                width: 15px
+                height: 15px
+                svg
+                  width: 100%
+                  height: 100%
+                  color: $y4
+              .sr-rating
+                display: inline-block
+                font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                color: $w
+                font-size: 14px
+                
+          .sr-result-name
+            font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            max-height: 40px
+            font-size: 16px
+            color: #efeffa
+            overflow: hidden
+            text-overflow: ellipsis
+            margin-top: 5px
+
+
+            
+        
+
+
+.explore-wrapper
+  position: relative
+  overflow: hidden
+  // background: transparent
+  // background-image: url('./img/vino-li-gGX1fJkmw3k-unsplash-min.jpg') 
+  // // background-image: url('./img/jason-leung-Xaanw0s0pMk-unsplash.jpg')
+  // background-repeat: repeat
+  // background-size: contain
+  // background-position:  center center
+  background-color: #202325
+  color: $w
+  &::before
+    animation: movie 1s steps(4) infinite
+    position: absolute
+    background-color: $b
+    content: ''
+    height: 300%
+    width: 300%
+    background-image: url(./img/movie.png)
+
+    height: 200%
+    left: -50%
+    top: -50%
+    width: 200%
+    opacity: .7
+    z-index: 3
+  
+      
+  .explore-overlay
+    position: relative
+    z-index: 7
+    // background: rgba(0,0,0,.85)
+    padding-bottom: 60px
+    .explore-ind-cat-1,.explore-ind-cat-2,.explore-ind-cat-3,.explore-ind-cat-4,.explore-ind-cat-5,.explore-ind-cat-6,.explore-ind-cat-7,.explore-ind-cat-8,.explore-ind-cat-9,.explore-ind-cat-10
+      color: $w
+      
+      padding-bottom: 30px
+      position: relative
+      top: 20px
+      max-width: 90%
+      margin: 0 auto
+      .category-header
+        padding: 0 1.5%
+        display: flex
+        justify-content: space-between
+        
+        .category-title
+          letter-spacing: 1.1px
+          z-index: 1
+          position: relative
+          padding: 1px 3px
+          padding-top: 0px
+          border-bottom: 1px solid $w
+          border-right: 1px solid $w
+          color: $y4
+          font-size: 20px
+          font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          
+          background: transparent
+          &::before
+            content: ''
+            position: absolute
+            top: 0
+            z-index: -1
+            bottom: 0
+            right: 0
+            left: 0
+            width: 20%
+            
+            height: 100%
+            // background: rgba(255,255,255, .25)
+        .see-more
+          align-self: center
+          color: $g3
+          font-size: 14px
+          display: flex
+          align-items: center
+          
+          svg
+            margin-left: 3px
+            position: relative
+            top: 0px
+            width: 18px
+            height: 18px
+            align-self: center
+            display: inline-block
+            color: $g3
+      .result-collection
+        overflow-x: scroll
+        &::-webkit-scrollbar
+          
+          height: 6px
+        &::-webkit-scrollbar-thumb
+          background: $r2
+          
+          border-radius: 5px
+        .result-container-1,.result-container-2,.result-container-3,.result-container-4,.result-container-5,.result-container-6,.result-container-7,.result-container-8,.result-container-9,.result-container-10
+          width: 3800px
+          padding-bottom: 10px
+          display: flex
+          justify-content: space-around
+          padding-top: 20px
+          .result  
+            flex-basis: 180px
+            
+            
+            .img-container
+              .result-img
+                max-width: 100%
+                display: block
+                &:hover
+                  transform: scale(1.3)
+              .result-rating
+                margin-top: 5px
+                            
+                .star
+                  display: inline-block
+                  width: 15px
+                  height: 15px
+                  svg
+                    width: 100%
+                    height: 100%
+                    color: $y4
+                .rating
+                  display: inline-block
+                  font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                  color: $w
+                  font-size: 14px
+                  
+            .result-name
+              font-family: 'Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+              max-height: 40px
+              font-size: 16px
+              color: #efeffa
+              overflow: hidden
+              text-overflow: ellipsis
+              margin-top: 5px
+
+    .explore-ind-cat-1
+      top: 40px
+
+
+
+.footer
+  
+  font-size: 14px
+  color: #444a4e
+  background-image: url('./img/vino-li-gGX1fJkmw3k-unsplash-min.jpg') 
+  background-repeat: repeat
+  background-size: cover
+  background-position:  center center
+  
+  
+  .footer-overlay
+    padding-top: 10px
+    background: rgba(0,0,0,.8)
+    .container
+      margin: 0 auto
+      max-width: 90%
+
+      .footer-top
+        flex-wrap: wrap
+        display: flex
+        justify-content: space-between
+        
+        .footer-top-content
+          flex-basis: 15%
+          .footer-title
+            text-transform: uppercase
+            margin-bottom: 10px
+            font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            // color: #efeffa
+            color: $g6
+            // color: #2b546a
+            
+          .footer-description
+            // color: #8491a5
+            color: #444a4e
+          .footer-content
+            .footer-item
+              line-height: 2.3
+              .footer-link
+                font-size: 16px
+                &:hover
+                  color: $g5
+        .social
+          flex-basis: 20%
+          .footer-social
+            display: flex
+            
+            .footer-item
+              .list-link
+                margin-right: 10px
+                svg
+                  width: 25px
+                  height: 25px
+                  // color: #8491a5
+                  color: #444a4e
+                  &:hover
+                    color: $g5
+        .desc
+          flex-basis: 35%
+          .footer-description
+            // color: #8491a5
+            color: #444a4e
+            text-align: justify
+            line-height: 1.6
+            font-size: 16px
+            
+
+      .section-footer-bottom
+        margin-top: 15px
+        font-size: 14px
+        border-top: 1px solid $g6
+        text-align: center
+        padding: 15px 0
+        
+        color: #8491a5
+
+
+
+.alert-index-page
+  
+  z-index: 55
+  background: rgba(0,0,0,0.9)
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  display: none
+  justify-content: center
+  align-items: center
+  .alert-index-inner
+    border-radius: 5px
+    max-width: 200px
+    padding: 20px
+    background: $w
+    display: inline-block
+    .alert-index-text
+      color: $r5
+      font-size: 18px
+      display: inline-block
+      
+
+
+@keyframes movie
+  0% 
+      -webkit-transform: translate(0, 0)
+      transform: translate(0, 0)
+  
+  10% 
+      -webkit-transform: translate(-5%, -5%)
+      transform: translate(-5%, -5%)
+  
+  20% 
+      -webkit-transform: translate(-10%, 5%)
+      transform: translate(-10%, 5%)
+  
+  30% 
+      -webkit-transform: translate(5%, -10%)
+      transform: translate(5%, -10%)
+  
+  40% 
+      -webkit-transform: translate(-5%, 15%)
+      transform: translate(-5%, 15%)
+  
+  50% 
+      -webkit-transform: translate(-10%, 5%)
+      transform: translate(-10%, 5%)
+  
+  60% 
+      -webkit-transform: translate(15%, 0)
+      transform: translate(15%, 0)
+  
+  70% 
+      -webkit-transform: translate(0, 10%)
+      transform: translate(0, 10%)
+  
+  80% 
+      -webkit-transform: translate(-15%, 0)
+      transform: translate(-15%, 0)
+  
+  90% 
+      -webkit-transform: translate(10%, 5%)
+      transform: translate(10%, 5%)
+  
+  100% 
+      -webkit-transform: translate(5%, 0)
+      transform: translate(5%, 0)
+
+
+
+@keyframes scroll
+  0% 
+    transform: rotate(-25deg) translateY(0)
+
+  50%
+    transform: rotate(-25deg) translateY(-550px)
+
+  100% 
+    transform: rotate(-25deg) translateY(-1100px)
+
+@keyframes scroll2
+  0% 
+    transform: rotate(-25deg) translateY(0)
+
+  100% 
+    transform: rotate(-25deg) translateY(-150px)
+
+
+
+@media (max-width: 1270px)
+  .content
+    h3
+      font-size: 40px !important
+
+@media (max-width: 1080px)
+  .footer-title
+    font-size: 15px !important
+    font-weight: bold !important
+  .footer-link
+    font-size: 14px !important
+  .footer-description
+    font-size: 14px !important
+  .section-footer-bottom
+    font-size: 14px !important
+
+  .nav-list
+    .nav-item
+      line-height: 2.5
+      .nav-link
+        color: $t5
+        font-size: 14px !important
+        font-weight: normal
+  .nav-header
+      
+    font-size: 18px !important
+      
+    
+
+  .content
+    h3
+      font-size: 35px !important
+
+
+@media (max-width: 960px)
+  .rating
+    font-size: 16px !important
+  .fb-content
+    font-size: 12px !important
+  .see-more
+    font-size: 12px !important
+    svg
+      margin-left: 3px
+      position: relative
+      top: 1px !important
+      width: 14px !important
+      height: 14px !important
+      align-self: center
+      display: inline-block
+      color: $g3
+  .cover
+    height: 70vh !important
+  .content
+    h3
+      font-size: 30px !important
+
+@media (max-width: 906px)
+  .mobile-nav
+    width: 30vw !important
+
+
+@media (max-width: 848px)
+  .footer-top
+    align-content: flex-end
+  .footer-top-content
+    flex-basis: 23% !important
+  .desc
+    flex-basis: 95% !important
+    margin-bottom: 30px 
+  .right
+    transform: translateX(-10vw) !important
+
+  .content
+    h3
+      // font-size: 28px !important
+
+  .search-form
+    max-width: 350px !important
+    .form-group
+      input, select
+        padding: 7px 7px !important
+
+
+
+@media (max-width: 768px)
+  .result-collection
+    overflow-x: scroll !important
+    &::-webkit-scrollbar
+      background: transparent !important
+      display: none !important
+      height: none !important
+    &::-webkit-scrollbar-thumb
+      background: none !important
+      
+      border-radius: none !important
+  .search-form
+    margin-top: 0 !important
+    padding-top: 10px !important
+  .cover
+    height: 70vh !important
+    .content
+      width: 70% !important
+  .result-container-1,.result-container-2,.result-container-3,.result-container-4,.result-container-5,.result-container-6,.result-container-7,.result-container-8,.result-container-9,.result-container-10
+      width: 3200px !important
+      display: flex
+      justify-content: space-between
+      .result  
+        flex-basis: 150px !important
+  .search-result-wrapper
+      width: 100%
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important
+      grid-gap: 15px
+
+@media (max-width: 700px)
+  .mobile-nav
+      width: 40vw !important
+
+@media (max-width: 632px)
+  .search-form
+    max-width: 320px !important
+
+@media (max-width: 600px)
+  .search-form
+    max-width: 300px !important
+
+@media (max-width: 550px)
+  .mobile-nav
+    width: 60vw !important
+  .cover
+    .content
+      width: 80% !important
+
+
+@media (max-width: 500px)
+  .nav-item
+    line-height: 2.2 !important
+  .star
+    display: inline-block
+    width: 12px !important
+    height: 12px !important
+    svg
+      width: 100%
+      height: 100%
+      color: $y4
+  .search-result-wrapper
+      width: 100%
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important
+      grid-gap: 10px
+  .search-result-wrapper
+      width: 100%
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important
+      grid-gap: 10px
+  .search-result
+    .container
+      width: 100% !important
+
+  .rating
+    font-size: 12px !important
+  .result-name
+    font-size: 14px !important
+  .footer-top
+    display: block !important
+  .desc
+    margin-bottom: 10px !important
+  .qlm,.qlt,.social
+    margin-bottom: 10px !important
+
+  .category-title
+    font-size: 14px !important
+
+  .search-input
+    
+    color: $g5
+    background: $w
+  input::-webkit-input-placeholder
+    color: $g5
+    font-size: 14px
+  .cover
+    position: relative
+    height: 100vh !important
+    overflow: hidden
+    
+    .img-scroll
+      
+      position: absolute
+      top: -100px
+      left: -150px
+      z-index: 0
+      max-height: 1099px
+      animation: scroll2 5s infinite linear
+    
+    
+    .content
+      color: $g8
+      position: relative
+      bottom: 0
+      top: 0
+      
+      
+      z-index: 10
+      width: 100% !important
+      min-height: 60vh !important
+      padding: 85px 20px
+      padding-bottom: 10px
+      // background-image:  url('./img/background.svg')  
+      // background-size: cover
+      // background-position: top center
+      background: rgba(0, 0, 0, .92)
+      // background: linear-gradient(45deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,0.85) 100%)
+      // background: rgba(22, 30, 46, 1)
+      .navigation
+        top: 10px !important
+        .container
+          .right
+            transform: translateX(-12vw) !important
+  
+      h3
+        font-size: 30px !important
+        text-align: center
+
+      .search-form
+        max-width: 400px !important
+        padding: 15px 20px !important
+        margin: 0 auto
+        margin-top: 5px
+        background: transparent
+        .form-group
+          input, select
+            padding: 7px 7px !important
+    
+
+  .result-container-1,.result-container-2,.result-container-3,.result-container-4,.result-container-5,.result-container-6,.result-container-7,.result-container-8,.result-container-9,.result-container-10
+      width: 2550px !important
+      display: flex
+      justify-content: space-between
+      .result  
+        flex-basis: 120px !important
+
+@media (max-width: 344px)
+  .mobile-nav
+    .nav-header
+      font-size: 14px !important
+  .cover
+    .content
+      h3
+        font-size: 25px !important
+
+
+  
+
+  
