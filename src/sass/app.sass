@@ -43,12 +43,18 @@ body
   background: #f0f4f9
   display: flex
   transition: all .8s
+
+  .root
+    margin: 0
+    padding: 0
+    width: 100vw
+    height: 100vh
   
   
 
     
   .mobile-nav-inner
-    
+    overflow-y: scroll
     width: 100%
     font-family: 'Header', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     button
@@ -191,7 +197,7 @@ body
           color: $g5
         .categories-select
           background: $w
-          color: $g6
+          color: $g5
       .form-submit
         margin-top: 20px
         .submit-button
@@ -210,10 +216,12 @@ body
           font-size: 14px
           padding: 10px
           background: $pk4
+          &:hover
+            background: $pk6
 
 
 .search-result
-  display: none
+  
   position: relative
   overflow: hidden
   // background-image: url('./img/vino-li-gGX1fJkmw3k-unsplash-min.jpg') 
@@ -352,7 +360,7 @@ body
     .explore-ind-cat-1,.explore-ind-cat-2,.explore-ind-cat-3,.explore-ind-cat-4,.explore-ind-cat-5,.explore-ind-cat-6,.explore-ind-cat-7,.explore-ind-cat-8,.explore-ind-cat-9,.explore-ind-cat-10
       color: $w
       
-      padding-bottom: 30px
+      padding-bottom: 10px
       position: relative
       top: 20px
       max-width: 90%
@@ -553,13 +561,16 @@ body
   align-items: center
   .alert-index-inner
     border-radius: 5px
-    max-width: 200px
-    padding: 20px
+    max-width: 300px
+    border-left: 6px solid $r5
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    padding: 15px 20px
     background: $w
     display: inline-block
     .alert-index-text
       color: $r5
-      font-size: 18px
+      font-size: 16px
       display: inline-block
       
 
@@ -870,6 +881,8 @@ body
       justify-content: space-between
       .result  
         flex-basis: 120px !important
+  .explore-ind-cat-1
+    max-width: 95% !important
 
 @media (max-width: 344px)
   .mobile-nav

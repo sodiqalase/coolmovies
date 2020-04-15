@@ -6,6 +6,7 @@ const SearchCompContainer = ({values}) => {
   let paint = values.results.map((each, index) => {
     return <SearchCards key={index}  values={{name: each.name || each.title, rating2: each.vote_average, mtd: values.method, pp : each.poster_path || each.profile_path, rating: values.rating, id: each.id }} />
   })
+  console.log(values, paint)
   return (
     <React.Fragment>
       <section className="search-result">

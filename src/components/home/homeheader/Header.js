@@ -34,11 +34,14 @@ const Header = ({values}) => {
     func();
   }
   const handleChange = (e) => {
+    
     setFormState({...formstate,[e.target.name]: e.target.value});
   }
   const handleSubmit = (e) => {
+    console.log(e)
     let met = formstate.method
     let ent = formstate.entry
+    
     func2(null, [], 'hide')
     
     
@@ -48,6 +51,7 @@ const Header = ({values}) => {
     } else {
       getDataFromTmdb(ent,met)
       .then(e => {
+        setFormState({entry: '', method: ''})
         
         let filtered = e.results.filter(each => {
           return each.profile_path || each.poster_path != null;
@@ -65,6 +69,8 @@ const Header = ({values}) => {
       e.preventDefault()
   
   }
+
+
   return (
     <React.Fragment>
       <section className="cover">

@@ -12,8 +12,8 @@ const Home = () => {
   const [store, setStore] = useState({isAlertShowing: false ,isNavOpen: false,isSearchCompOpen: false,searchresult: [],searchmethod: '', isRatingShowing: false, shouldscroll: false})
 
   useEffect(() => {
-    if ( store.shouldscroll){
-      document.querySelector('.search-result').scrollIntoView({behavior: 'smooth'})
+    if (store.shouldscroll){
+      document.querySelector('.search-result').scrollIntoView({behaviour: 'smooth'})
     }
     if (store.isAlertShowing){
       setTimeout(() => {setStore({...store, isAlertShowing: false}); },2000)
@@ -22,11 +22,11 @@ const Home = () => {
   )
   
   const handleNav = () => {
-    setStore({...store, isNavOpen: !store.isNavOpen})
+    setStore({...store, isNavOpen: !store.isNavOpen, shouldscroll: false})
   }
   const handleSearch = (method,result,search) => {
     if (search === 'dont'){
-      setStore({...store, isAlertShowing: true,searchresult: result, searchmethod: method, isSearchCompOpen: false })
+      setStore({...store, isAlertShowing: true,searchresult: result, searchmethod: method, isSearchCompOpen: false, shouldscroll: false })
       
     } else if (search === true) {
       if (method === 'celebrity'){
@@ -46,7 +46,7 @@ const Home = () => {
     <React.Fragment>
       <MobileNav values={{nav: store.isNavOpen, func: handleNav}}  />
       <Header values={{func: handleNav, funct: handleSearch}} />
-      {store.isSearchCompOpen? <SearchComp values={{results: store.searchresult, method: store.searchmethod, rating: store.isRatingShowing}} /> : ''}
+      {store.isSearchCompOpen ? <SearchComp values={{results: store.searchresult, method: store.searchmethod, rating: store.isRatingShowing}} /> : ''}
       <CategoriesContainer  />
       
       <Alert values={{nav:store.isAlertShowing}} />
