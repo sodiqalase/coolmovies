@@ -19,7 +19,7 @@ const Home = () => {
     if (store.isAlertShowing){
       setTimeout(() => {setStore({...store, isAlertShowing: false}); },2000)
     }
-    document.querySelector('.cover').scrollIntoView({behaviour: 'smooth'})
+    
   }, [store]
   )
   
