@@ -110,6 +110,7 @@ const Tv = (props) => {
       let bg = "url('https://image.tmdb.org/t/p/original" + one.pp + "')";
       const ins = document.querySelector('.tv-body');
       ins.style.backgroundImage = bg;
+      document.querySelector('.tv-body').scrollIntoView({behaviour: 'smooth'})
     })
     
   },[])

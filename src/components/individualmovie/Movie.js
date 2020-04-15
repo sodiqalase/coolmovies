@@ -90,6 +90,7 @@ const Movie = (props) => {
       let bg = "url('https://image.tmdb.org/t/p/original" + one.pp + "')";
       const ins = document.querySelector('.movie-body');
       ins.style.backgroundImage = bg;
+      document.querySelector('.movie-body').scrollIntoView({behaviour: 'smooth'})
     })
     
   },[])

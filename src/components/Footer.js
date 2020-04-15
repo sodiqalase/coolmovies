@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="footer-top-content qlm">
                 <h3 className="footer-title">Quick Links</h3>
                 <ul className="footer-content">
-                  <li className="footer-item"><Link to="/more/1" className="footer-link">Trending Movies</Link></li>
+                  <li className="footer-item"><a href="/more/1" className="footer-link">Trending Movies</a></li>
                   <li className="footer-item"><Link to="/more/4" className="footer-link">Now Playing</Link></li>
                   <li className="footer-item"><Link to="/more/5" className="footer-link">Top Rated</Link></li>
                   <li className="footer-item"><Link to="/more/6" className="footer-link">Up Coming</Link></li>
@@ -27,7 +27,7 @@ const Footer = () => {
               <div className="footer-top-content qlt">
                 <h3 className="footer-title">Quick Links Tv</h3>
                 <ul className="footer-content">
-                  <li className="footer-item"><Link to="/more/2" className="footer-link">Trending Shows</Link></li>
+                  <li className="footer-item"><a href="/more/2" className="footer-link">Trending Shows</a></li>
                   <li className="footer-item"><Link to="/more/8" className="footer-link">Airing Today</Link></li>
                   <li className="footer-item"><Link to="/more/10" className="footer-link">Popular Shows</Link></li>
                   <li className="footer-item"><Link to="/more/9" className="footer-link">Top Rated Shows</Link></li>

@@ -12,12 +12,14 @@ const Home = () => {
   const [store, setStore] = useState({isAlertShowing: false ,isNavOpen: false,isSearchCompOpen: false,searchresult: [],searchmethod: '', isRatingShowing: false, shouldscroll: false})
 
   useEffect(() => {
+
     if (store.shouldscroll){
       document.querySelector('.search-result').scrollIntoView({behaviour: 'smooth'})
     }
     if (store.isAlertShowing){
       setTimeout(() => {setStore({...store, isAlertShowing: false}); },2000)
     }
+    document.querySelector('.cover').scrollIntoView({behaviour: 'smooth'})
   }, [store]
   )
   

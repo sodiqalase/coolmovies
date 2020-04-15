@@ -46,6 +46,7 @@ const Celebrity = (props) => {
       let bg = "url('https://image.tmdb.org/t/p/original" + e.details.pp + "')";
       const ins = document.querySelector('.people-body');
       ins.style.backgroundImage = bg;
+      document.querySelector('.people-body').scrollIntoView({behaviour: 'smooth'})
     })
   },[])
   
