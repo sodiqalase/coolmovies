@@ -16,21 +16,21 @@ const Footer = () => {
               <div className="footer-top-content qlm">
                 <h3 className="footer-title">Quick Links</h3>
                 <ul className="footer-content">
-                  <li className="footer-item"><Link to="more/1" className="footer-link">Trending Movies</Link></li>
-                  <li className="footer-item"><Link to="more/4" className="footer-link">Now Playing</Link></li>
-                  <li className="footer-item"><Link to="more/5" className="footer-link">Top Rated</Link></li>
-                  <li className="footer-item"><Link to="more/6" className="footer-link">Up Coming</Link></li>
-                  <li className="footer-item"><Link to="more/7" className="footer-link">Popular</Link></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/1" className="footer-link">Trending Movies</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/4" className="footer-link">Now Playing</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/5" className="footer-link">Top Rated</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/6" className="footer-link">Up Coming</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/7" className="footer-link">Popular</a></li>
                 </ul>
               </div>
               <div className="footer-top-content qlt">
                 <h3 className="footer-title">Quick Links Tv</h3>
                 <ul className="footer-content">
-                  <li className="footer-item"><Link href="coolmovies.netlify/more/2" className="footer-link">Trending Shows</Link></li>
-                  <li className="footer-item"><Link to="more/8" className="footer-link">Airing Today</Link></li>
-                  <li className="footer-item"><Link to="more/10" className="footer-link">Popular Shows</Link></li>
-                  <li className="footer-item"><Link to="more/9" className="footer-link">Top Rated Shows</Link></li>
-                  <li className="footer-item"><Link to="more/11" className="footer-link">On The Air</Link></li>
+                  <li className="footer-item"><a href="/%PUBLIC_URL%/more/2" className="footer-link">Trending Shows</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/8" className="footer-link">Airing Today</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/10" className="footer-link">Popular Shows</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/9" className="footer-link">Top Rated Shows</a></li>
+                  <li className="footer-item"><a href="%PUBLIC_URL%/more/11" className="footer-link">On The Air</a></li>
                 </ul>
               </div>
               <div className="footer-top-content social">
