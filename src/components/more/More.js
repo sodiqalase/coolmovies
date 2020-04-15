@@ -87,6 +87,7 @@ const More = (props) => {
       })
       
     }
+    document.querySelector('.sresult-body').scrollIntoView({behaviour: 'smooth'})
 
   },[state.page])
 
