@@ -1,10 +1,5 @@
 import React, {useState} from 'react'
 
-
-
-
-
-
 async function getDataFromTmdb(query,method){
   let url;
   if (method === 'shows'){
@@ -20,15 +15,10 @@ async function getDataFromTmdb(query,method){
   return res;
 }
 
-
-
 const Header = ({values}) => {
   const [formstate, setFormState] = useState({entry: '', method: ''})
   let func = values.func;
   let func2 = values.funct
-  
-  
-  
   
   function handleClick (){
     func();
